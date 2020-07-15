@@ -1,0 +1,20 @@
+package com.product.app.service;
+
+import com.product.app.model.MenuItem;
+import com.product.app.repository.MenuItemRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+
+@Service
+public class MenuItemService {
+
+    @Autowired
+    private MenuItemRepository menuItemRepository;
+
+    @RequestMapping("/menu")
+    public Iterable<MenuItem> getMenu() {
+        return menuItemRepository.findAll();
+    }
+}
