@@ -25,6 +25,7 @@ public class MenuItem {
         this.image = image;
     }
 
+
     @Override
     public String toString() {
         return "MenuItem{" +
